@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Doutch Records — label indépendant, distribution musicale, accompagnement artistique et services digitaux.">
+  <title>Doutch Records — Le son prend sa place</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root{--bg:#090909;--panel:#131313;--panel2:#1a1a1a;--red:#e3222b;--white:#f7f5f2;--muted:#aaa6a1;--line:#292929;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .topline{height:4px;background:linear-gradient(90deg,var(--red) 0 28%,#6e1116 28% 100%)}
+    header{position:sticky;top:0;z-index:10;background:rgba(9,9,9,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.08em}.mark{width:39px;height:39px;border:2px solid var(--red);display:grid;place-items:center;color:var(--red);font-size:13px;font-weight:900;transform:rotate(-5deg)}.brand span:last-child{font-size:15px}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.24em;font-weight:600;margin-top:-3px}
+    nav{display:flex;align-items:center;gap:27px;font-size:13px;color:#ddd}nav a:hover{color:var(--red)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:white;padding:12px 18px;font-weight:800;font-size:12px;letter-spacing:.06em;border:1px solid var(--red);transition:.2s}.nav-cta:hover,.btn:hover{background:transparent;color:var(--white)}
+    .menu{display:none;background:none;color:white;border:1px solid var(--line);padding:8px 11px;font-size:20px}
+    .hero{position:relative;overflow:hidden;padding:105px 0 95px;background:radial-gradient(ellipse at 82% 45%,rgba(227,34,43,.2),transparent 38%),linear-gradient(115deg,#090909 0%,#101010 65%,#19090a 100%);border-bottom:1px solid var(--line)}
+    .hero:after{content:"DR";position:absolute;right:4%;top:4%;font-size:clamp(190px,34vw,440px);font-weight:1000;line-height:1;color:rgba(255,255,255,.025);letter-spacing:-.12em;pointer-events:none}
+    .eyebrow{color:var(--red);font-size:11px;font-weight:900;letter-spacing:.28em;text-transform:uppercase}.hero h1{font-size:clamp(48px,8vw,92px);line-height:.98;letter-spacing:-.065em;max-width:820px;margin:22px 0}.hero h1 em{font-style:normal;color:var(--red)}.hero p{max-width:560px;color:#c2bfbb;font-size:16px;margin:0 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn.secondary{background:transparent;border-color:#555}.btn.secondary:hover{border-color:var(--red);color:var(--red)}
+    .hero-note{margin-top:62px;display:flex;gap:35px;flex-wrap:wrap;color:#b7b3af;font-size:11px;text-transform:uppercase;letter-spacing:.15em}.hero-note b{color:white}
+    section{padding:88px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.section-head h2{font-size:clamp(32px,5vw,52px);letter-spacing:-.05em;line-height:1.05;margin:10px 0 0}.section-head p{max-width:390px;color:var(--muted);font-size:14px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.about-copy p{color:#c0bdb8;font-size:16px}.statement{border-left:3px solid var(--red);padding:22px 25px;background:var(--panel);font-size:clamp(21px,3vw,30px);font-weight:800;line-height:1.25}.statement span{color:var(--red)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--line);padding:28px;min-height:220px;transition:.2s}.card:hover{transform:translateY(-5px);border-color:#6b2024}.number{font-size:12px;color:var(--red);font-weight:900;letter-spacing:.2em}.card h3{font-size:20px;margin:28px 0 10px}.card p{font-size:13px;color:var(--muted);margin:0}
+    .dark-band{background:#111;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.service{display:flex;gap:18px;padding:24px;background:#171717;border:1px solid var(--line)}.service-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;background:rgba(227,34,43,.12);color:var(--red);font-size:19px}.service h3{margin:0 0 5px;font-size:17px}.service p{margin:0;color:var(--muted);font-size:13px}.price{display:inline-block;margin-top:10px;color:#fff;font-weight:800;font-size:12px}
+    .project{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}.project-art{min-height:310px;background:radial-gradient(circle at 50% 45%,rgba(227,34,43,.32),transparent 45%),linear-gradient(135deg,#1b1b1b,#080808);border:1px solid #333;display:grid;place-items:center;text-align:center}.project-art strong{font-size:clamp(45px,8vw,80px);letter-spacing:-.08em;line-height:1}.project-art small{display:block;color:var(--red);letter-spacing:.35em;font-weight:900;font-size:10px;margin-top:12px}.project-copy p{color:var(--muted)}
+    .contact{background:linear-gradient(120deg,#1a090a,#101010 55%);border-top:1px solid #3a1719}.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:35px}.contact h2{font-size:clamp(36px,6vw,64px);line-height:1;letter-spacing:-.06em;margin:12px 0}.contact p{color:#c3bfbb;max-width:500px}.contact-actions{display:flex;flex-direction:column;gap:12px;min-width:220px}.contact-actions a{font-size:13px}
+    footer{padding:26px 0;color:#888;font-size:11px;border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner b{color:#eee;letter-spacing:.12em}
+    @media(max-width:800px){nav{display:none;position:absolute;left:0;right:0;top:78px;background:#101010;padding:22px 20px 26px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:18px}nav.open{display:flex}.menu{display:block}.nav-cta{display:none}.about-grid,.project{grid-template-columns:1fr;gap:28px}.cards{grid-template-columns:1fr 1fr}.contact-inner{align-items:flex-start;flex-direction:column}.contact-actions{width:100%}}
+    @media(max-width:540px){.wrap{width:min(var(--max),calc(100% - 30px))}.hero{padding:78px 0 65px}.hero-note{gap:14px;flex-direction:column;margin-top:42px}.section-head{display:block}.section-head p{margin-top:16px}.cards,.services-grid{grid-template-columns:1fr}section{padding:68px 0}.card{min-height:unset}.card h3{margin-top:18px}.service{padding:19px}.project-art{min-height:230px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#accueil" aria-label="Doutch Records, accueil"><span class="mark">DR</span><span>DOUTCH RECORDS<small>LABEL • DISTRIBUTION • CRÉATION</small></span></a>
+      <nav id="navigation"><a href="#apropos">Le label</a><a href="#services">Services</a><a href="#productions">Productions</a><a href="#contact">Contact</a></nav>
+      <a class="nav-cta" href="#contact">PARLONS DE TON PROJET ↗</a>
+      <button class="menu" id="menu" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="accueil">
+      <div class="wrap">
+        <div class="eyebrow">Le label qui accompagne les idées</div>
+        <h1>Le son prend<br>sa <em>place.</em></h1>
+        <p>Doutch Records accompagne les projets musicaux et créatifs à travers la distribution, la promotion et des services digitaux pensés pour faire avancer les talents.</p>
+        <div class="actions"><a class="btn" href="#services">DÉCOUVRIR NOS SERVICES ↗</a><a class="btn secondary" href="#apropos">CONNAÎTRE LE LABEL</a></div>
+        <div class="hero-note"><span><b>01</b> — Distribution</span><span><b>02</b> — Promotion digitale</span><span><b>03</b> — Accompagnement créatif</span></div>
+      </div>
+    </section>
+    <section id="apropos">
+      <div class="wrap about-grid">
+        <div class="about-copy"><div class="eyebrow">À propos de Doutch Records</div><h2 class="section-head" style="display:block;margin:12px 0 20px"><span style="font-size:clamp(34px,5vw,54px);letter-spacing:-.05em">Une vision.<br>Une identité.<br><span style="color:var(--red)">Du mouvement.</span></span></h2><p>Doutch Records est un label et une structure de services créatifs qui souhaite aider les artistes, créateurs et entrepreneurs à mieux présenter et diffuser leurs projets.</p><p>Notre approche : valoriser chaque idée avec une image professionnelle, une communication claire et des solutions adaptées aux besoins du projet.</p></div>
+        <div class="statement">Nous croyons aux projets qui ont quelque chose à dire — et qui méritent <span>d'être entendus.</span></div>
+      </div>
+    </section>
+    <section class="dark-band" id="services">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Ce que nous faisons</div><h2>Nos services</h2></div><p>Des solutions accessibles pour accompagner la visibilité et le développement de tes activités.</p></div>
+        <div class="services-grid">
+          <article class="service"><div class="service-icon">♫</div><div><h3>Distribution musicale</h3><p>Accompagnement pour la mise en ligne et la diffusion de tes titres sur les plateformes musicales.</p></div></article>
+          <article class="service"><div class="service-icon">◎</div><div><h3>Visibilité TikTok</h3><p>Solutions de promotion pour donner davantage de visibilité à tes contenus.</p><span class="price">À partir de 1 500 FCFA</span></div></article>
+          <article class="service"><div class="service-icon">▣</div><div><h3>Création de pages professionnelles</h3><p>Mise en place de pages Facebook, TikTok et YouTube avec une présentation soignée.</p><span class="price">2 000 FCFA / page · Pack 3 pages : 5 000 FCFA</span></div></article>
+          <article class="service"><div class="service-icon">▶</div><div><h3>Montage vidéo</h3><p>Montage et adaptation de vidéos pour mieux présenter tes contenus sur les réseaux sociaux.</p></div></article>
+          <article class="service"><div class="service-icon">♪</div><div><h3>Production instrumentale</h3><p>Création d'instrumentales pour accompagner tes idées musicales.</p><span class="price">À partir de 20 000 FCFA</span></div></article>
+          <article class="service"><div class="service-icon">↗</div><div><h3>Accompagnement TikTok Business</h3><p>Gestion et accompagnement de comptes vendeurs TikTok Business Entreprise.</p></div></article>
+        </div>
+        <p style="color:#85817d;font-size:11px;margin-top:20px">Les tarifs et prestations peuvent varier selon les besoins du projet. Le mixage audio ne fait pas partie de nos services actuels.</p>
+      </div>
+    </section>
+    <section id="productions">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Créativité en action</div><h2>Projets & productions</h2></div><p>Chaque projet est une nouvelle occasion de raconter une histoire et de construire une identité forte.</p></div>
+        <div class="project">
+          <div class="project-art"><div><strong>DR<span style="color:var(--red)">.</span></strong><small>DOUTCH RECORDS</small></div></div>
+          <div class="project-copy"><div class="eyebrow">Notre univers</div><h2 style="font-size:clamp(30px,4vw,44px);line-height:1.08;letter-spacing:-.05em">Faire grandir les idées, donner de l'écho aux talents.</h2><p>Musique, contenus audiovisuels et communication digitale : Doutch Records développe un univers au croisement de la création et de la visibilité.</p><a class="btn secondary" href="mailto:doutchrecords@gmail.com?subject=Mon%20projet%20avec%20Doutch%20Records">PRÉSENTER MON PROJET ↗</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <div><div class="eyebrow">On construit la suite ensemble ?</div><h2>Parlons de<br><span style="color:var(--red)">ton projet.</span></h2><p>Une question sur nos services ou une idée à développer ? Écris-nous pour présenter ton besoin.</p></div>
+        <div class="contact-actions"><a class="btn" href="mailto:doutchrecords@gmail.com?subject=Contact%20-%20Doutch%20Records">ÉCRIRE AU LABEL ↗</a><a href="mailto:doutchrecords@gmail.com">doutchrecords@gmail.com</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><span><b>DOUTCH RECORDS</b> · Le son prend sa place.</span><span>© <span id="year">2026</span> Doutch Records. Tous droits réservés.</span></div></footer>
+  <script>
+    const menu=document.getElementById('menu'),nav=document.getElementById('navigation');
+    menu.addEventListener('click',()=>{const opened=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(opened));menu.textContent=opened?'×':'☰';});
+    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
